@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(contact.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+        }  
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: #FF9F87;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #FF9F87;
+        } 
+        .response-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: whitesmoke;
+            display: none;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1> 
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Top Attractions</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="tips.html">Local Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <form class="contact-form" id="contactForm" onsubmit="return showMessage(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="mobno" placeholder="Enter your mobile number" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+
+        <div class="response-message" id="responseMessage">
+            Thank you for your message! We will connect with you shortly.
+        </div>
+    </section>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();  
+            document.getElementById('responseMessage').style.display = 'block';  
+            document.getElementById('contactForm').reset();  
+        }
+    </script>
+</body>
+</html>

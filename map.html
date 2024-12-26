@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(195, 201, 200);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: grey
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar li {
+            margin: 0 15px;
+            display: inline-block;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar a:hover {
+            background: #FF9F87;
+            color: white;
+            transform: scale(1.1);
+        } 
+        .map-container {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;  
+            gap: 40px;  
+            align-items: center;
+        } 
+        .map-section {
+            width: 80%;  
+            box-sizing: border-box;
+            border: 2px solid #FF6F61;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .map-section:hover {
+            transform: scale(1.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .map-section h3 {
+            background-color: burlywood
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        } 
+        .map-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        } 
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;   
+                align-items: center;
+                justify-content: center;
+            }
+
+            .map-section {
+                width: 100%;  
+            }
+
+            iframe {
+                height: 300px;  
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Top Attractions</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="tips.html">Local Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="map-container">
+        <h2>Explore the Best Attractions</h2>
+        
+        <div class="map-section">
+            <h3>Eiffel Tower, Paris</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.0656978461357!2d2.292292915674827!3d48.85884407928706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d87738b4f3%3A0x8b65e5a6d0cc1ec6!2sEiffel+Tower!5e0!3m2!1sen!2sfr!4v1626247630574!5m2!1sen!2sfr" loading="lazy"></iframe>
+        </div>
+        
+        <div class="map-section">
+            <h3>Statue of Liberty, New York City</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.937982020501!2d-74.0445009!3d40.6892494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a31756f79c7%3A0x25a90cc8bc6c15b2!2sStatue+of+Liberty!5e0!3m2!1sen!2sus!4v1626247845455!5m2!1sen!2sus" loading="lazy"></iframe>
+        </div>
+
+        <div class="map-section">
+            <h3>Tokyo Tower, Tokyo</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1026338357027!2d139.7445793!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b527992c271%3A0x97fa42ecae99f09!2sTokyo+Tower!5e0!3m2!1sen!2sjp!4v1626247975139!5m2!1sen!2sjp" loading="lazy"></iframe>
+        </div>
+    </section>
+</body>
+</html>
